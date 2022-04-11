@@ -1,16 +1,25 @@
 from tkinter import * 
-#import random
+from functools import partial #to prevent unwanted windows
 
+import random
 
 class Converter:
-        def __init__ (self, parent):
-                print("hello world")
-        
-        
-        
+        def __init__ (self):
+                background_colour= "light blue" #Formatting Variables
+                
+                #Converter Main Screen GUI...
+                self.converter_frame = Frame(width=300, height=300, bg=background_colour)
+                self.converter_frame.grid()
+                
+                # Temperature Conversion Heading (row 0)
+                self.temp_converter_label = Label(self.converter_frame, text="Temperature Converter",
+                                                   font=("Arial", "16", "bold" ),
+                                                   padx=10, pady=10)
+                                                   
+                self.temp_converter_label.grid(row=0)                                            
 #main routine
-if __name__ == "_main_":
+if __name__ == "__main__":
         root = Tk()
-        root.title('Temperature Converter')
-        something = Converter(root)
+        root.title("Temperature Converter")
+        something = Converter()
         root.mainloop()
