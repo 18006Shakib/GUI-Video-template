@@ -34,6 +34,24 @@ class Converter:
                 get-help.help_text.configure(test="Help text goes here")
                 
                 
+#---------------Second Class---------------
+class Help:
+        def __init__(self, partner):
+                 
+                background = "orange"
+                # Disables help button
+                partner.help_button.config(state=DISABLED)
+                
+                self.help_box = Toplevel()
+                
+                # Set up GUI Frame
+                self.help_frame = Frame(self.help_box, bg=background)
+                self.help_frame.grid()
+                
+                # Help test (label, row 1)
+                
+                # Dismiss button (row 2)
+                
                 
 #---------------Main Routine---------------
 if __name__ == "__main__":
